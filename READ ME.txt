@@ -1,0 +1,14 @@
+說明:
+動畫產品中, 關於 Data, Update, Modified 組合非常的多變
+原本系統設計有一種 Basis Class 專門執行 Modified 的任務
+因產品演進, 慢慢演進出一種 Key 的概念( 依不同的時間, 改變 Property )
+但由於 Key 的概念並非所有的開發者都同時瞭解
+所以有關 Key 的操作都散落在各個 Derived Class
+且實作方式因開發者能力不一致, 產生各種嚴重程度不一的 BUG
+
+程式目的在於:
+1. 統整各個 Derived Class 的操作概念
+2. 透過 template 減少 BUG & 維護成本
+3. 用一些 template 固定 Derived Class 產出流程
+
+由於實際系統複雜, 先實作 Prototype 作為概念測試
